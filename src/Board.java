@@ -26,10 +26,7 @@ public class Board {
         }
     }
 
-    public boolean PlayerMove(int input, int turn) {
-        int row = input / 10;
-        int col = input % 10;
-
+    public boolean PlayerMove(int row, int col, int turn) {
         if (board[row][col] != ' ') {
             return false;
         }
