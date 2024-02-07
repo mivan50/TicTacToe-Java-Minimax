@@ -31,15 +31,8 @@ public class Board {
             return false;
         }
 
-        board[row][col] = getSymbol(turn);
+        board[row][col] = 'X';
         return true;
-    }
-
-    private char getSymbol(int turn) {
-        if (turn % 2 == 1) {
-            return 'X';
-        }
-        return 'O';
     }
 
     public char checkWinner() {
