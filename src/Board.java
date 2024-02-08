@@ -1,12 +1,5 @@
 public class Board {
-    private char[][] board;
-
-    public Board() {
-        board = new char[3][3];
-        initializeBoard();
-    }
-
-    private void initializeBoard() {
+    public static void initializeBoard(char[][] board) {
         for (int row = 0; row < 3; ++row) {
             for (int col = 0; col < 3; ++col) {
                 board[row][col] = ' ';
@@ -14,7 +7,7 @@ public class Board {
         }
     }
 
-    public void displayBoard() {
+    public static void displayBoard(char[][] board) {
         System.out.println("-------------");
         for (int row = 0; row < 3; row++) {
             System.out.print("| ");
@@ -26,7 +19,7 @@ public class Board {
         }
     }
 
-    public boolean PlayerMove(int row, int col, int turn) {
+    public static boolean PlayerMove(int row, int col, char[][] board) {
         if (board[row][col] != ' ') {
             return false;
         }
@@ -35,7 +28,7 @@ public class Board {
         return true;
     }
 
-    public char checkWinner() {
+    public static char checkWinner(char[][] board) {
         for (int i=0; i<3; ++i) {
             if (board[i][0] == board[i][1] && board[i][1] == board[i][2] && board[i][0] != ' ') {
                 return board[i][0];
@@ -54,6 +47,17 @@ public class Board {
         }
 
         return ' ';
+    }
+
+    public static boolean isBoardFull(char[][] board) {
+        for (int i = 0; i < 3; i++) {
+            for (int j = 0; j < 3; j++) {
+                if (board[i][j] == ' ') {
+                    return false;
+                }
+            }
+        }
+        return true;
     }
 
 }
