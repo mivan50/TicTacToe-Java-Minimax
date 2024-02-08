@@ -16,9 +16,9 @@ This is a simple implementation of the classic Tic Tac Toe game - the computer p
 
 Clone the repository to your local machine:
 
-    ```bash
-    git clone https://github.com/mivan50/TicTacToe-Java-Minimax.git
-    ```
+```bash
+git clone https://github.com/mivan50/TicTacToe-Java-Minimax.git
+```
 
 ## How Minimax Works
 
